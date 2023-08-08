@@ -7,7 +7,7 @@ export const Cart = () => {
 
     useTitle("Cart");
 
-    const items_in_cart = [
+    const products = [
         {"id": 1, "name": "Sony Wh-Ch510 Bluetooth Wireless", "price": 149, "image": "/assets/images/1001.png"},
         {"id": 2, "name": "boAt Rockerz 450", "price": 49, "image": "/assets/images/1002.png"}
       ]
@@ -15,9 +15,9 @@ export const Cart = () => {
   return (
     <main>
       <section className="cart">
-        <h1>Cart Item: {items_in_cart.length} / ${total} </h1>
-        { items_in_cart.map((item_in_cart) => (
-            <CartCard key={item_in_cart.id} item_in_cart={item_in_cart} />
+        <h1>Cart Item: {products.length} / ${total} </h1>
+        { products.map((product) => (
+            <CartCard key={product.id} item_in_cart={product} />
         ))}
       </section>
     </main>
